@@ -1,0 +1,367 @@
+/* App.css */
+
+/* Global styles */
+body {
+  font-family: 'Kanit', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #f7d9b1, #d97b46);
+  color: #4a2f25;
+}
+
+/* Override body styles to allow background to show */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kanit', sans-serif;
+  min-height: 100vh;
+  background: transparent !important;
+  position: relative;
+}
+
+h1, h2, h3 {
+  font-family: 'Permanent Marker', cursive;
+  color: #ff5733;
+}
+
+.card {
+  background: rgba(255, 249, 241, 0.9); /* More transparent background */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 2px solid #e5b57b;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+
+button {
+  font-family: 'Kanit', sans-serif;
+  background-color: #d94e4e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #c43c3c;
+}
+
+.map {
+  background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+  border: 2px solid #7b341e;
+  border-radius: 10px;
+}
+
+.icons {
+  width: 50px;
+  height: 50px;
+}
+
+.flag {
+  background: url('../public/assets/images/sa-flag.jpeg');
+  /* or alternatively use: */
+  /* background: url('%PUBLIC_URL%/assets/images/sa-flag.jpeg'); */
+  width: 100px;
+  height: 60px;
+  display: inline-block;
+  background-size: cover;
+}
+
+/* Additional styles for specific components */
+.scenario-card {
+  background: #fff9f1;
+  border: 2px solid #e5b57b;
+}
+
+.profile-menu {
+  background: #fff9f1;
+}
+
+.profile-menu button {
+  background-color: #d94e4e;
+}
+
+.scenario-selection button {
+  background-color: #d94e4e;
+}
+
+/* Basic styles for the app */
+.App {
+  background: transparent !important;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background: #feb47b;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #7b341e;
+}
+
+/* Center all buttons */
+button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 5px;
+  color: #222;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e6b800;
+}
+
+/* Cards and sections with hover effects */
+section {
+  padding: 30px;
+}
+
+section h2 {
+  font-size: 2rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+section .card {
+  background: #fff9f1;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(123, 52, 30, 0.4);
+}
+
+.card p {
+  margin: 15px 0;
+  font-size: 1.2rem;
+}
+
+.card button {
+  background: #ff9800;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.card button:hover {
+  background: #e68a00;
+  transform: scale(1.1);
+}
+
+/* Profile container at the top-right corner */
+.profile-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Circular avatar */
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ff7e5f; /* Use a background or image for the avatar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.1);
+}
+
+/* Profile menu that appears when clicked */
+.profile-menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #fff9f1;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 10;
+}
+
+/* Profile menu buttons */
+.profile-menu button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px;
+  text-align: left;
+  font-size: 1rem;
+  margin: 5px 0;
+  border-radius: 4px;
+  transition: background 0.3s;
+  width: 150px;
+}
+
+.profile-menu button:hover {
+  background-color: #ff9800;
+}
+
+/* Optional: Close the dropdown if clicked outside */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kanit', sans-serif;
+  background-color: #222;
+  color: #fff;
+  min-height: 100vh;
+  background: transparent !important;
+  position: relative;
+}
+
+.timer {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.alert {
+  color: red;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.question-container {
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.scenario-selection {
+  text-align: center;
+  margin-top: 20px;
+  background: transparent !important;
+}
+
+/* ScenarioMap.css */
+.scenario-map {
+  padding: 30px;
+  text-align: center;
+}
+
+.scenario-map h2 {
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  color: #ffcc00;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.scenario-card {
+  background-color: #fff9f1;
+  border: 2px solid #e5b57b;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 160px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.scenario-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(255, 140, 0, 0.6);
+}
+
+.scenario-card .icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.scenario-card p {
+  font-size: 1rem;
+  color: #e61212;
+}
+
+.completion-status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 126, 95, 0.9);
+  color: #fff9f1;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.lock-status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(217, 78, 78, 0.9);
+  color: #fff9f1;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+/* Add styles for background transitions */
+.background-transition {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Add support for backdrop-filter in specific browsers */
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .card,
+  .profile-menu,
+  .scenario-card {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}

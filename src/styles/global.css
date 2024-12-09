@@ -1,0 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+  --font-playful: 'Bubblegum Sans', cursive;
+  --font-serious: 'Montserrat', sans-serif;
+}

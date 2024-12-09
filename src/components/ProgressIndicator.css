@@ -1,0 +1,67 @@
+.progress-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  width: 100%;
+  height: 500px;
+}
+
+.progress-step {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.progress-step.current {
+  background-color: #4caf50;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Style for the Proceed button */
+.proceed-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.proceed-button:hover {
+  background-color: #45a049;
+}
+
+/* Remove styles for the small map container */
+#smallMapContainer {
+  /*
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #ccc;
+  */
+  /* ...existing styles... */
+}
+
+/* Remove any additional styles that might create extra map containers */
+/* ...existing code... */

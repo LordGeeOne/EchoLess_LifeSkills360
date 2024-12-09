@@ -1,0 +1,171 @@
+.game-page {
+  min-height: 100vh;
+  padding: 2rem;
+  background: #222;
+  color: #fff;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.question-section {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.option-button {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 204, 0, 0.8);
+  color: #222;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 80%;
+}
+
+.option-button:hover {
+  background: rgba(230, 184, 0, 0.8);
+}
+
+.scenario-map {
+    padding: 30px;
+    text-align: center;
+}
+
+.scenario-map h2 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    color: #ffcc00;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.grid-item {
+    background: #444;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 160px;
+    text-align: center;
+    /* color: #fff; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.753);
+}
+
+.grid-item .icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.grid-item p {
+    font-size: 1rem;
+    color: #e61212;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  max-width: 800px;
+  width: 100%;
+}
+
+.question-image {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.question-overlay {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  padding: 0rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.timer-overlay {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.2rem;
+  border-radius: 8px;
+}
+
+.options-overlay {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: #2196F3 rgba(0, 0, 0, 0.1);
+}
+
+/* Webkit browsers (Chrome, Safari, newer versions of Edge) */
+::-webkit-scrollbar {
+  width: 10px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #2196F3, #1e88e5);
+  border-radius: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #1e88e5, #1976d2);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2196F3 rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Add smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
