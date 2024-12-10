@@ -14,6 +14,7 @@ import RewardsPage from './components/RewardsPage';
 import NotificationsPage from './components/NotificationsPage';
 import LeaderboardPage from './components/LeaderboardPage';
 import HealthServicesPage from './components/HealthServicesPage';
+import TownshipInfo from './components/TownshipInfo';
 import './App.css';
 import './styles/global.css';
 
@@ -103,6 +104,7 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<ScenarioMap />} />
         <Route path="/map" element={<MapPage />} />
+        <Route path="/township-info" element={<TownshipInfo />} />
         <Route path="/game/party" element={<GamePage gameType="party" />} />
         <Route path="/game/smoking" element={<GamePage gameType="smoking" />} />
         <Route path="/game/social-media" element={<GamePage gameType="social-media" />} />

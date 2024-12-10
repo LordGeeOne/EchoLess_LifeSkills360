@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import LeaderboardPage from './LeaderboardPage';
 import { questions } from '../data/questions';
 import { TOWNSHIPS } from '../data/townships';
@@ -436,6 +436,21 @@ function ScenarioMap() {
             }}>
               {townshipName}
             </span>
+            <Link 
+              to="/township-info"
+              state={{ townshipName, backgroundImage }}
+              style={{
+                display: 'block',
+                fontSize: '1rem',
+                color: '#4CAF50',
+                textDecoration: 'none',
+                marginTop: '0.5rem',
+                fontFamily: 'Kanit, sans-serif', // Add font family here
+                letterSpacing: '0.5px' // Add letter spacing for better readability
+              }}
+            >
+              About {townshipName} →
+            </Link>
           </h2>
           <div className="grid-container" style={{
             display: 'grid',
