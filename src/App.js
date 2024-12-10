@@ -13,6 +13,7 @@ import ChatInterface from './components/ChatInterface';
 import RewardsPage from './components/RewardsPage';
 import NotificationsPage from './components/NotificationsPage';
 import LeaderboardPage from './components/LeaderboardPage';
+import HealthServicesPage from './components/HealthServicesPage';
 import './App.css';
 import './styles/global.css';
 
@@ -113,6 +114,7 @@ function AppContent() {
         <Route path="/leaderboard" element={<LeaderboardPage />} />
         <Route path="/rewards" element={<RewardsPage />} />
         <Route path="/notifications" element={<NotificationsPage />} />
+        <Route path="/health-services" element={<HealthServicesPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>

@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { auth, provider, signInWithPopup } from '../firebase';
 import { signOut, signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { FaTrophy, FaGift, FaBell, FaUserCircle, FaRobot, FaHome, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaTrophy, FaGift, FaBell, FaUserCircle, FaRobot, FaHome, FaMapMarkerAlt, FaMedkit } from 'react-icons/fa';
 import { RiLogoutBoxRLine } from 'react-icons/ri';
 
 const Header = ({ user, progress = 0 }) => {
@@ -167,6 +167,12 @@ const Header = ({ user, progress = 0 }) => {
               } 
             })} 
             active={pathname === '/chat'}
+          />
+          <IconLink 
+            icon={FaMedkit}
+            label="Help Services"
+            onClick={() => navigate('/health-services')}
+            active={pathname === '/health-services'}
           />
         </nav>
 
